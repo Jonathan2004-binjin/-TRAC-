@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trac - Login</title>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #f0f0f0;
+            --text-color: #333;
+            --border-color: #ccc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-group label {
+            margin-left: 0.5rem;
+            font-weight: normal;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0052a3;
+        }
+
+        .social-login {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn-social {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-social:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .signup-prompt {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .signup-prompt a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Trac</h1>
+        </header>
+        <main>
+            <form class="login-form">
+                <h2>Admin Login</h2>
+                <p>Welcome back. Enter your credentials to access your account.</p>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="hello@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Keep me signed in</label>
+                </div>
+                <button type="submit" class="btn-primary">Continue</button>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn-social">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Google logo" width="20" height="20">
+                        </button>
+                        <button type="button" class="btn-social">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Apple logo" width="20" height="20">
+                        </button>
+                        <button type="button" class="btn-social">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Facebook logo" width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+                <p class="signup-prompt">Don't have an account? <a href="#">Sign up here</a></p>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
